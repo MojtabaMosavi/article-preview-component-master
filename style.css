@@ -1,0 +1,219 @@
+:root {
+  --Very-Dark-Grayish-Blue: hsl(217, 19%, 35%);
+  --Desaturated-Dark-Blue: hsl(214, 17%, 51%);
+  --Grayish-Blue: hsl(212, 23%, 69%);
+  --Light-Grayish-Blue: hsl(210, 46%, 95%);
+}
+
+*,
+*::after,
+*::after {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+}
+
+body {
+  font-family: "Manrope", sans-serif;
+  font-size: 0.8125rem;
+  background-color: var(--Light-Grayish-Blue);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*================ Blocks=================== */
+
+.container {
+}
+
+.article-preview {
+  display: flex;
+  max-width: 45.875rem;
+}
+
+/*================ Elements=================== */
+
+.article-preview__image {
+  max-width: 17.75rem;
+  width: 100%;
+  height: auto;
+}
+
+.article-preview__text {
+  position: relative;
+  width: 60%;
+  padding: 1.875rem 2.5rem;
+  color: hsl(217, 19%, 35%);
+}
+
+.article-preview__text-h1 {
+  font-weight: 700;
+  font-size: 1.5em;
+  margin: 0;
+}
+
+.article-preview__profile {
+  margin-top: 1.5rem;
+  display: flex;
+  max-height: 2.625rem;
+  max-width: 23rem;
+}
+
+.article-preview__profile-container {
+  flex: 1;
+  display: flex;
+}
+
+.article-preview__profile-image {
+  border-radius: 6.25rem;
+}
+
+.article-preview__profile-info {
+  margin-left: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.article-preview__profile-name {
+  font-weight: 700;
+}
+
+.article-preview__share-icon {
+  max-width: 3rem;
+  margin-left: auto;
+  flex: 1;
+  text-align: center;
+  background-image: url("./images/icon-share.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 6.25rem;
+  background-color: var(--Light-Grayish-Blue);
+}
+
+.article-preview__share-icon:hover {
+  transition: all 0.5s ease;
+  background-color: var(--Very-Dark-Grayish-Blue);
+}
+
+.article-preview__social-icons {
+  width: 15.5rem;
+  height: 3.4rem;
+  background-color: var(--Very-Dark-Grayish-Blue);
+  position: absolute;
+  padding: 0;
+  margin: 0;
+  top: 56%;
+  transform: translateY(-50%);
+  left: 60%;
+  border-radius: 0.6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.article-preview__social-icons_hidden {
+  display: none;
+}
+
+.article-preview__social-icons-container {
+  width: 70%;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  list-style-type: none;
+}
+
+.article-preview__social-icons-mobile {
+  display: none;
+}
+
+.article-preview__social-icons-share {
+  text-decoration: none;
+  color: var(--Grayish-Blue);
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+}
+
+.article-preview__social-icons-container-cube {
+  width: 1rem;
+  height: 1rem;
+  transform: translateY(-50%) rotate(45deg);
+  position: absolute;
+  top: 100%;
+  left: 40%;
+  background-color: inherit;
+}
+
+@media screen and (max-width: 56.25rem) {
+  body {
+    min-width: 23.4375rem;
+  }
+
+  .container {
+    border-radius: 0.6rem;
+  }
+
+  .article-preview__text {
+    padding-bottom: 0.8rem;
+  }
+
+  .article-preview {
+    max-width: 20.75rem;
+    flex-direction: column;
+    justify-content: unset;
+    align-items: unset;
+  }
+
+  .article-preview__image {
+    max-width: 100%;
+    object-fit: cover;
+    height: 12rem;
+    border-top-left-radius: 0.6rem;
+    border-top-right-radius: 0.6rem;
+  }
+
+  .article-preview__text {
+    width: 100%;
+  }
+
+  .article-preview__profile {
+    max-width: 100%;
+  }
+  .article-preview__social-icons-container-cube {
+    display: none;
+  }
+
+  .article-preview__social-icons {
+    width: 100%;
+    height: 4rem;
+    top: 100%;
+    left: 0;
+    transform: translateY(-100%);
+  }
+
+  .article-preview__social-icons-mobile {
+    display: block;
+    background-image: url("./images/icon-share.svg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    border-radius: 2rem;
+    height: 2rem;
+    width: 2rem;
+    margin-left: 1rem;
+    cursor: pointer;
+  }
+
+  .article-preview__social-icons-mobile:hover {
+    background-color: var(--Light-Grayish-Blue);
+  }
+
+  .article-preview__social-icons_hidden {
+    display: none;
+  }
+}
